@@ -12,7 +12,7 @@ A [Google Console project](https://console.cloud.google.com/google/) with the fo
 - Places API
 
 Since you can't limit Google Console budgets to 0€ (because fuck you -Google) remember to limit the quota to avoid surprises.
-How much free requests does Maps API has? Who knows, documentation/interface is garbage. 
+How many free requests has Maps API? Who knows, documentation/interface is garbage. 
 If you check https://cloud.google.com/maps-platform/pricing/ it says they give you 200$/month for free to spend on whatever you want.
 
 ## Setup
