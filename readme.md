@@ -1,4 +1,4 @@
-![preview](https://raw.githubusercontent.com/tetreum/gmaps-helper/master/readme-images/preview.gif)
+![preview](https://raw.githubusercontent.com/tetreum/gmaps-helper/main/readme-images/preview.gif)
 
 # GMaps Helper
 
@@ -21,4 +21,4 @@ If you check https://cloud.google.com/maps-platform/pricing/ it says they give y
 2. Done!
 
 
-![preview](https://raw.githubusercontent.com/tetreum/gmaps-helper/master/readme-images/1.png)
+![preview](https://raw.githubusercontent.com/tetreum/gmaps-helper/main/readme-images/1.png)
