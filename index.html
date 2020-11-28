@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>GMaps Helper</title>
+
+    <link href="https://developers.google.com/maps/documentation/javascript/examples/default.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.css" rel="stylesheet">
+    <link href="helper.css?v=3" rel="stylesheet">
+
+    <script src="helper.js?v=1"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&libraries=places"></script>
+</head>
+<body>
+	<h2 class="ui center aligned header" style="margin-top:20px">GMaps Helper</h2>
+    <div class="ui container">
+    	<div class="ui two column stackable grid">
+    		<div class="ten wide column">
+    			<p>
+			        <div id="search-block">
+			            <div class="ui fluid icon input">
+			            	<input type="text" placeholder="Location name..." id="search-address">
+			            	<i class="inverted circular search link icon" id="search-button"></i>
+			            </div>
+			        </div>
+		        </p>
+			    <p>
+			        <div id="map-canvas"></div>
+			    </p>
+			    <p>
+			    	<div class="ui info message">Hold CTRL to move the entire frame.</div>
+			    </p>
+		    </div>
+		    <div class="six wide column">
+		    	<p><button class="fluid ui primary button" id="create-selector-button">Place selector</button></p>
+				<p><button class="fluid ui button" id="open-osm-button">Show Open Street Map</button></p>
+
+                <h4 class="ui dividing header">Top-Left</h4>
+                <div id="top-lat-row">Latitude: <div id="coords-top-lat" class="display-inline"></div></div>
+                <div>Longitude: <div id="coords-top-long" class="display-inline"></div></div>
+                
+                <h4 class="ui dividing header">Bottom-Right</h4>
+                <div id="bottom-lat-row">Latitude: <div id="coords-bottom-lat" class="display-inline"></div></div>
+                <div>Longitude: <div id="coords-bottom-long" class="display-inline"></div></div>
+                
+                <h4 class="ui dividing header">Area</h4>
+                <div>Width: <div id="area-width" class="display-inline">0</div> km</div>
+                <div>Height: <div id="area-height" class="display-inline">0</div> km</div>
+				<div>Area: <div id="area-area" class="display-inline">0</div> km²</div>
+				<div class="grouped fields">
+					<div class="field">
+						<div class="ui checkbox">
+							<input id="show-grid" type="checkbox">
+							<label for="show-grid">Show grid</label>
+						</div>
+					</div>
+					<div class="field">
+						<div class="ui checkbox">
+							<input id="best-rect" type="checkbox">
+							<label for="best-rect">Show best rect <i class="question circle icon" title="Adjust the selected area to match the size of the tiles"></i></label>
+						</div>
+					</div>
+					<div class="field">
+						<button class="fluid ui primary button" id="select-best-rect-button" style="display: none">Adjust the selected area</button>
+					</div>
+				</div>
+                <h4 class="ui dividing header">Move selector</h4>
+                <div id="move-selector">
+                    <div align="center">
+                        <img src="images/arrow-left-icon.png" alt="Left" title="Left">
+                        <img src="images/arrow-right-icon.png" alt="Right" title="Right">
+                        <img src="images/arrow-up-icon.png" alt="Up" title="Up">
+                        <img src="images/arrow-down-icon.png" alt="Down" title="Down">
+                    </div>
+                </div>
+                <div class="ui segment">
+                	<div class="ui attached label">Quadrant</div>
+	                <div id="coordinates"></div>
+                </div>
+		    </div>
+	    </div>
+    </div>
+    <script>
+		const gMapsHelper = new GMapsHelper();
+		
+		(function (){
+			gMapsHelper.init();
+		})();
+    </script>
+</body>
+</html>
